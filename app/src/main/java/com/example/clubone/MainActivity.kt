@@ -1,5 +1,6 @@
 package com.example.clubone
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -33,8 +34,8 @@ class MainActivity : AppCompatActivity() {
         loginButton.setOnClickListener {
             val username = usernameInput.text.toString()
             val password = passwordInput.text.toString()
-            Log.i("Test Credentials", "Username: $username, Password: $password")
+            val intent = Intent(this, HomePage::class.java)
+            startActivity(intent)
         }
-
     }
 }
